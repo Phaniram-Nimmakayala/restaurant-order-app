@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mini Project</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav_header">
+            <div class="logo nav_logo">
+                <a href="#">Phani <span>Ram</span></a>
+            </div>
+            <div class="nav_menu_btn" id="menu_btn">
+                <span><i class='bx bx-menu'></i></span>
+            </div>
+        </div>
+
+        <ul class="nav_links" id="nav_links">
+            <li><a href="#home">Home</a></li>
+             <li><a href="#special">Ice creams</a></li>
+            <li><a href="#shakes">Shakes</a></li>
+             <li><a href="#popular">Popular Items</a></li>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav_btn">
+           <button class="btn" id="cartBtn" aria-label="Open cart">
+                <i class='bx bx-shopping-bag'></i>
+             <span id="cartCount" class="cart-count">0</span>
+           </button>
+            <button class="btn" id="user_btn" aria-label="Open login">
+                 <i class='bx bx-user'></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Responsive Mobile Menu -->
+  <div id="mobileMenuOverlay" class="mobile-menu-overlay" hidden></div>
+
+  <aside id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <button id="mobileMenuClose" class="mobile-menu-close" aria-label="Close menu">&times;</button>
+    <ul class="mobile-menu-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#special">Ice creams</a></li>
+      <li><a href="#shakes">Shakes</a></li>
+      <li><a href="#popular">Popular Items</a></li>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </aside>
+
+    <header class="section_container header_container" id="home">
+        <div class="header_image">
+            <img src="image5.webp" alt="header">
+        </div>
+
+        <div class="header_content">
+            <h1>Galaxy of Flavors <span>& Creamy Delights</span></h1>
+            <p class="section_description">
+               Enter a cosmic world of milkshakes and ice creams that melt your heart.
+            </p>
+            <div class="header_btn">
+                <input type="text" id="searchBar" placeholder="Search your flavour...">
+
+                <button class="search">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="special_container" id="special">
+  <h2 class="section_header"><i class='bx bxs-popsicle'></i>Ice creams</h2>
+
+  <div class="special_grid">
+   <div class="cards-container">
+    <div class="special_card">
+      <div class="card_img">
+        <img src="image6.webp" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Mexican Brownie</h4>
+          <p class="item_subtitle">Fudgy brownie chunks with warm spices, swirled into rich chocolate cream.</p>
+          </div>
+           <del style="color: grey;">₹180</del>
+          <span class="price">₹130</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.8</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+           <div class="special_card">
+      <div class="card_img">
+        <img src="image36.jpg" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>chocolate Fudge</h4>
+          <p class="item_subtitle">Rich chocolate ice cream with thick, fudgy swirls for pure indulgence.</p>
+          </div>
+           <del style="color: grey;">₹210</del>
+          <span class="price">₹150</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.5</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+   <div class="special_card">
+      <div class="card_img">
+        <img src="image49.jpg" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Salad with Butterscotch</h4>
+          <p class="item_subtitle">Creamy butterscotch with crunchy salad bits for a sweet, crispy twist.</p>
+          </div>
+          <span class="price">₹130</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.2</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+            <div class="special_card">
+      <div class="card_img">
+        <img src="image10.jpg" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Fruits Overloaded</h4>
+          <p class="item_subtitle">A fruity blast of mixed seasonal fruits layered over smooth, creamy delight.</p>
+          </div>
+           <del style="color: grey;">₹160</del>
+          <span class="price">₹120</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.7</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+ <div class="special_card">
+      <div class="card_img">
+        <img src="image11.jpg" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Dry Fruit Sundae</h4>
+          <p class="item_subtitle">A creamy treat topped with crunchy dry fruits for a rich, nutty indulgence.</p>
+          </div>
+          <span class="price">₹120</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 3.9</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+ <div class="special_card">
+      <div class="card_img">
+        <img src="image37.png" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Nutella Chocolate Brownie</h4>
+          <p class="item_subtitle">Brownie chunks with Nutella in rich, creamy chocolate.</p>
+          </div>
+           <del style="color: grey;">₹250</del>
+          <span class="price">₹189</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.6</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+
+
+            <div class="special_card">
+      <div class="card_img">
+        <img src="image13.jpg" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Nutella Fudge</h4>
+          <p class="item_subtitle">Silky Nutella fused with thick chocolate fudge for a melt-in-mouth delight.</p>
+          </div>
+          <span class="price">₹210</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.7</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+
+
+            <div class="special_card">
+      <div class="card_img">
+        <img src="image9.webp" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Strawberry Icecream Salad</h4>
+          <p class="item_subtitle">Mixed fruits topped with strawberry cream.</p>
+          </div>
+           <del style="color: grey;">₹210</del>
+          <span class="price">₹150</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.8</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+
+            <div class="special_card">
+      <div class="card_img">
+        <img src="image14.jpg" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Nutella Butterscotch</h4>
+          <p class="item_subtitle">A rich blend of creamy Nutella and golden butterscotch for a sweet, nutty swirl.</p>
+          </div>
+           <del style="color: grey;">₹249</del>
+          <span class="price">₹180</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.5</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+
+
+           <div class="special_card">
+      <div class="card_img">
+        <img src="high-angle-bowl-with-chocolate-ice-cream-flavor.jpg" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Death by Chocolate</h4>
+          <p class="item_subtitle">A rich chocolate overload with fudge, chunks, and creamy layers.</p>
+          </div>
+           <del style="color: grey;">₹310</del>
+          <span class="price">₹249</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.9</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+
+
+            <div class="special_card">
+      <div class="card_img">
+        <img src="image17.jpg" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Frozen Coffee</h4>
+          <p class="item_subtitle">Chilled, creamy coffee blended to perfection for a bold and refreshing kick.</p>
+          </div>
+          <span class="price">₹130</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.2</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+
+      <div class="special_card">
+      <div class="card_img">
+        <img src="delicious-ice-cream-with-topping (1).jpg" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Fig & Honey</h4>
+          <p class="item_subtitle">Sweet figs blended with golden honey for a smooth, naturally rich delight.</p>
+          </div>
+           <del style="color: grey;">₹230</del>
+          <span class="price">₹189</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.9</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="special_container" id="shakes">
+  <h2 class="section_header"><i class='bx bxs-drink'></i>Shakes</h2>
+
+  <div class="special_grid">
+  <div class="cards-container">
+       <div class="special_card">
+      <div class="card_img">
+        <img src="image19.jpg" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Kit Kat Freak Shake</h4>
+          <p class="item_subtitle">Creamy chocolate shake with crunchy Kit Kat for a sweet, crispy treat.</p>
+          </div>
+           <del style="color: grey;">₹229</del>
+          <span class="price">₹190</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.8</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+
+
+
+           <div class="special_card">
+      <div class="card_img">
+        <img src="image20.jpg" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Belgium Chocolate Freak Shake</h4>
+          <p class="item_subtitle">Belgian chocolate blended into a rich, creamy shake.</p>
+          </div>
+           <del style="color: grey;">₹170</del>
+          <span class="price">₹130</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 5.0</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+
+   <div class="special_card">
+      <div class="card_img">
+        <img src="image21.jpg" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Black Currant Freak Shake</h4>
+          <p class="item_subtitle">A tangy-sweet black currant blend whipped into a vibrant, creamy shake.</p>
+          </div>
+          <span class="price">₹210</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.9</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+
+
+   <div class="special_card">
+      <div class="card_img">
+        <img src="image22.jpg" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Mango Lassi</h4>
+          <p class="item_subtitle">A creamy blend of ripe mangoes and yogurt for a sweet, refreshing sip.</p>
+          </div>
+           <del style="color: grey;">₹110</del>
+          <span class="price">₹90</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.4</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+
+
+          <div class="special_card">
+      <div class="card_img">
+        <img src="image23.jpg" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Oreo Thick Shake</h4>
+          <p class="item_subtitle">Vanilla shake with Oreo crunch for a classic chocolaty treat.</p>
+          </div>
+          <span class="price">₹240</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 5.0</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+
+
+
+
+            <div class="special_card">
+      <div class="card_img">
+        <img src="image24.jpg" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Thick Brownie Shake</h4>
+          <p class="item_subtitle">A rich, creamy shake packed with fudgy brownie chunks for a dense chocolate blast.</p>
+          </div>
+          <span class="price">₹150</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.7</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+
+
+            <div class="special_card">
+      <div class="card_img">
+        <img src="front-view-chocolate-dessert-with-marshmallows.jpg" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Nutella Freak Shake</h4>
+          <p class="item_subtitle">Thick Nutella shake for a rich, nutty chocolate. </p>
+          </div>
+           <del style="color: grey;">₹300</del>
+          <span class="price">₹249</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.7</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+
+
+            <div class="special_card">
+      <div class="card_img">
+        <img src="image26.jpg" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Kesar Falooda</h4>
+          <p class="item_subtitle">A saffron-infused delight layered with vermicelli, basil seeds, and rich creamy sweetness.</p>
+          </div>
+          <span class="price">₹110</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.7</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+
+
+          <div class="special_card">
+      <div class="card_img">
+        <img src="image50.webp" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Chocolate Thick Shake</h4>
+          <p class="item_subtitle">A dense, creamy chocolate blend made for pure choco indulgence.</p>
+          </div>
+           <del style="color: grey;">₹210</del>
+          <span class="price">₹189</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.6</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+
+
+          <div class="special_card">
+      <div class="card_img">
+        <img src="image57.png" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Death by Chocolate Shake</h4>
+          <p class="item_subtitle">Death by Chocolate Shake is a rich blend of chocolate ice cream, syrup, and brownie bits.</p>
+          </div>
+          <span class="price">₹199</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.7</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+
+
+            <div class="special_card">
+      <div class="card_img">
+        <img src="image31.jpg" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Chocolate Truffle Tick Shake</h4>
+          <p class="item_subtitle">A rich, chocolate shake infused with truffle for a, indulgent treat.</p>
+          </div>
+           <del style="color: grey;">₹200</del>
+          <span class="price">₹160</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.7</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+
+ <div class="special_card">
+      <div class="card_img">
+        <img src="image27.png" alt="Home made pizza">
+        <span class="card_badge">50%</span>
+         </div>
+        <div class="card_details">
+        <div class="title_price">
+          <div>
+          <h4>Iced Caramel Cold coffee</h4>
+          <p class="item_subtitle">Chilled coffee with caramel for a smooth, caffeine kick.</p>
+          </div>
+           <del style="color: grey;">₹289</del>
+          <span class="price">₹210</span>
+        </div>
+        <div class="card_meta">
+          <span class="rating"><i class='bx bxs-star'></i> 4.7</span>
+          <span class="time">50-79 min</span>
+        </div>
+        <div class="card_controls">
+        <div class="card_qty_control">
+        <button class="qty_btn">-</button>
+        <span class="qty_number">1</span>
+        <button class="qty_btn">+</button>
+        </div>
+        <button class="add_to_cart_btn">Add to Cart</button>
+       </div>
+       </div>
+    </div>
+        </div>
+        </div>
+    </section>
+
+   <section class="popular_container" id="popular">
+  <h2 class="section_header"><i class='bx bxs-food-menu'></i>Popular Items</h2>
+
+  <div class="popular_scroll_wrapper">
+    <button class="scroll_btn left" id="scrollLeftBtn">
+      <i class='bx bx-chevron-left'></i>
+    </button>
+
+    <div class="popular_viewport">
+      <div class="popular_items" id="popular_items">
+        <div class="popular_card">
+          <div class="card_img">
+            <img src="image33.png" alt="Home made pizza" />
+            <span class="card_badge">50%</span>
+          </div>
+          <div class="card_details">
+            <div class="title_price">
+              <h4>Chocolate Mousse Cup</h4>
+               <del style="color: grey;">₹289</del>
+              <span class="price">₹219</span>
+            </div>
+            <div class="card_meta">
+              <span class="rating"><i class='bx bxs-star'></i> 4.8</span>
+              <span class="time">50-79 min</span>
+            </div>
+            <div class="card_counter">
+              <button class="qty_btn">-</button>
+              <span class="qty_number">1</span>
+              <button class="qty_btn">+</button>
+            </div>
+             <button class="add_to_cart_btn">Add to Cart</button>
+          </div>
+        </div>
+        <div class="popular_card">
+          <div class="card_img">
+            <img src="image34.avif" alt="Home made pizza" />
+            <span class="card_badge">50%</span>
+          </div>
+          <div class="card_details">
+            <div class="title_price">
+              <h4>Dark Fantacy Truffle Jar Cake</h4>
+              <del style="color: grey;">₹350</del>
+              <span class="price">₹289</span>
+            </div>
+            <div class="card_meta">
+              <span class="rating"><i class='bx bxs-star'></i> 4.7</span>
+              <span class="time">50-79 min</span>
+            </div>
+            <div class="card_counter">
+              <button class="qty_btn">-</button>
+              <span class="qty_number">1</span>
+              <button class="qty_btn">+</button>
+            </div>
+             <button class="add_to_cart_btn">Add to Cart</button>
+          </div>
+        </div>
+       <div class="popular_card">
+          <div class="card_img">
+            <img src="image35.jpg" alt="Home made pizza" />
+            <span class="card_badge">50%</span>
+          </div>
+          <div class="card_details">
+            <div class="title_price">
+              <h4>Black Forest Pastrys with Chocolate Lava</h4>
+              <span class="price">₹350</span>
+            </div>
+            <div class="card_meta">
+              <span class="rating"><i class='bx bxs-star'></i> 4.7</span>
+              <span class="time">50-79 min</span>
+            </div>
+            <div class="card_counter">
+              <button class="qty_btn">-</button>
+              <span class="qty_number">1</span>
+              <button class="qty_btn">+</button>
+            </div>
+             <button class="add_to_cart_btn">Add to Cart</button>
+          </div>
+        </div>
+        <div class="popular_card">
+          <div class="card_img">
+            <img src="image38.jpg" alt="Home made pizza" />
+            <span class="card_badge">50%</span>
+          </div>
+          <div class="card_details">
+            <div class="title_price">
+              <h4>Chocolate Truffle Bomb Cake</h4>
+              <del style="color: grey;">₹849</del>
+              <span class="price">₹689</span>
+            </div>
+            <div class="card_meta">
+              <span class="rating"><i class='bx bxs-star'></i> 4.7</span>
+              <span class="time">50-79 min</span>
+            </div>
+            <div class="card_counter">
+              <button class="qty_btn">-</button>
+              <span class="qty_number">1</span>
+              <button class="qty_btn">+</button>
+            </div>
+             <button class="add_to_cart_btn">Add to Cart</button>
+          </div>
+        </div>
+
+         <div class="popular_card">
+          <div class="card_img">
+            <img src="image39.jpg" alt="Home made pizza" />
+            <span class="card_badge">50%</span>
+          </div>
+          <div class="card_details">
+            <div class="title_price">
+              <h4>Gulab Jamun Red Velvet Jar Cake</h4>
+              <span class="price">₹349</span>
+            </div>
+            <div class="card_meta">
+              <span class="rating"><i class='bx bxs-star'></i> 4.7</span>
+              <span class="time">50-79 min</span>
+            </div>
+            <div class="card_counter">
+              <button class="qty_btn">-</button>
+              <span class="qty_number">1</span>
+              <button class="qty_btn">+</button>
+            </div>
+             <button class="add_to_cart_btn">Add to Cart</button>
+          </div>
+        </div>
+
+         <div class="popular_card">
+          <div class="card_img">
+            <img src="image40.avif" alt="Home made pizza" />
+            <span class="card_badge">50%</span>
+          </div>
+          <div class="card_details">
+            <div class="title_price">
+              <h4>Chocolate Truffle Jar Cake</h4>
+              <del style="color: grey;">₹289</del>
+              <span class="price">₹209</span>
+            </div>
+            <div class="card_meta">
+              <span class="rating"><i class='bx bxs-star'></i> 4.7</span>
+              <span class="time">50-79 min</span>
+            </div>
+            <div class="card_counter">
+              <button class="qty_btn">-</button>
+              <span class="qty_number">1</span>
+              <button class="qty_btn">+</button>
+            </div>
+             <button class="add_to_cart_btn">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="popular_card">
+          <div class="card_img">
+            <img src="image41.webp" alt="Home made pizza" />
+            <span class="card_badge">50%</span>
+          </div>
+          <div class="card_details">
+            <div class="title_price">
+              <h4>Oreo Delight Premium Jar Cake</h4>
+              <span class="price">₹260</span>
+            </div>
+            <div class="card_meta">
+              <span class="rating"><i class='bx bxs-star'></i> 4.9</span>
+              <span class="time">50-79 min</span>
+            </div>
+            <div class="card_counter">
+              <button class="qty_btn">-</button>
+              <span class="qty_number">1</span>
+              <button class="qty_btn">+</button>
+            </div>
+             <button class="add_to_cart_btn">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="popular_card">
+          <div class="card_img">
+            <img src="image42.webp" alt="Home made pizza" />
+            <span class="card_badge">50%</span>
+          </div>
+          <div class="card_details">
+            <div class="title_price">
+              <h4>Butterscotch Mini Jar Cake</h4>
+              <span class="price">₹260</span>
+            </div>
+            <div class="card_meta">
+              <span class="rating"><i class='bx bxs-star'></i> 4.7</span>
+              <span class="time">50-79 min</span>
+            </div>
+            <div class="card_counter">
+              <button class="qty_btn">-</button>
+              <span class="qty_number">1</span>
+              <button class="qty_btn">+</button>
+            </div>
+             <button class="add_to_cart_btn">Add to Cart</button>
+          </div>
+        </div>
+
+         <div class="popular_card">
+          <div class="card_img">
+            <img src="image43.jpg" alt="Home made pizza" />
+            <span class="card_badge">50%</span>
+          </div>
+          <div class="card_details">
+            <div class="title_price">
+              <h4>Layered Chocolate Truffle Cake</h4>
+               <del style="color: grey;">₹680</del>
+              <span class="price">₹599</span>
+            </div>
+            <div class="card_meta">
+              <span class="rating"><i class='bx bxs-star'></i> 4.7</span>
+              <span class="time">50-79 min</span>
+            </div>
+            <div class="card_counter">
+              <button class="qty_btn">-</button>
+              <span class="qty_number">1</span>
+              <button class="qty_btn">+</button>
+            </div>
+             <button class="add_to_cart_btn">Add to Cart</button>
+          </div>
+        </div>
+
+         <div class="popular_card">
+          <div class="card_img">
+            <img src="image44.png" alt="Home made pizza" />
+            <span class="card_badge">50%</span>
+          </div>
+          <div class="card_details">
+            <div class="title_price">
+              <h4>Chocolate Overloaded Combo</h4>
+              <span class="price">₹1076</span>
+            </div>
+            <div class="card_meta">
+              <span class="rating"><i class='bx bxs-star'></i> 4.7</span>
+              <span class="time">50-79 min</span>
+            </div>
+            <div class="card_counter">
+              <button class="qty_btn">-</button>
+              <span class="qty_number">1</span>
+              <button class="qty_btn">+</button>
+            </div>
+             <button class="add_to_cart_btn">Add to Cart</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="scroll_btn right" id="scrollRightBtn">
+      <i class='bx bx-chevron-right'></i>
+    </button>
+  </div>
+
+  <div class="request_btn">
+    
+  </div>
+</section>
+
+
+<section class="video_section" id="summary">
+  <div class="video_text">
+    <h2>
+      Sweet hugs in every bites<br>
+      <span>Sweetness served with smiles & sprinkles!</span>
+    </h2>
+    <p>
+      Craving homemade while away from home?<br>
+      Delicious homemade dishes, yours to choose
+    </p>
+  </div>
+
+  <div class="video_wrapper">
+    <video id="home_video" poster="image46.jpg" controls>
+      <source src="vedio1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+<section class="contact_section" id="contact">
+  <div class="contact_container">
+    <div class="contact_form">
+      <h2>Do you have a question<br>or want to send us feedback?</h2>
+      <p>Fill this form and our Team will contact you next 48 hours.</p>
+      
+      <form>
+        <div class="input_group">
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+          <input type="email" id="email" name="email" placeholder="Your e-mail" required>
+        </div>
+        <textarea id="comment" name="comment" placeholder="Your message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="contact_image">
+      <img src="undraw_delivery-address_409g.svg" alt="Delivery Illustration">
+    </div>
+  </div>
+</section>
+
+<footer class="main_footer">
+  <div class="footer_content">
+
+    <ul class="footer_nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#special">Ice Creams</a></li>
+      <li><a href="#shakes">Shakes</a></li>
+      <li><a href="#popular">Populars</a></li>
+    </ul>
+
+    <div class="footer_info">
+      <p>© 2025 <span>Galaxy of Flavors & Delights</span>. All rights reserved.</p>
+      <h3 class="logo" style="margin-top: 30px;">Designed by <span>Phani Ram</span></h3>
+    </div>
+
+  </div>
+  <hr class="footer_line">
+</footer>
+
+<div id="popup" style="display:none;">
+  <p id="popupText"></p>
+  <button onclick="closePopup()">OK</button>
+</div>
+
+
+
+
+
+
+<div id="cartOverlay" class="cart-overlay" hidden></div>
+<aside id="cartPanel" class="cart-panel" aria-hidden="true">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button id="cartClose" class="cart-close" aria-label="Close cart">&times;</button>
+  </div>
+
+  <div id="cartItems" class="cart-items"></div>
+  <div id="cartEmpty" class="cart-empty">No items added to cart.</div>
+
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">₹0.00</span>
+    </div>
+    <button id="checkoutBtn" class="checkout-btn" disabled>Place Order</button>
+  </div>
+</aside>
+  <aside id="orderPanel" class="order-panel" aria-hidden="true">
+    <div class="order-header">
+      <h3>Enter your details</h3>
+      <button id="orderClose" class="order-close" aria-label="Close">&times;</button>
+    </div>
+
+    <form id="orderForm" class="order-form">
+      <div class="form-group">
+       
+        <input type="text" id="orderName" required placeholder="Enter your name">
+         <input type="tel" id="orderNum" required placeholder="Mobile number">
+      </div>
+      <div class="form-group">
+       
+        <textarea id="orderAddress" rows="3" required placeholder="Enter your current address"></textarea>
+      </div>
+      <button type="submit" class="submit-order-btn">Place Order</button>
+    </form>
+  </aside>
+
+
+
+
+<aside id="loginPanel" class="login-panel" aria-hidden="true">
+  <div class="login-header">
+    <h3>Login</h3>
+    <button id="loginClose" class="login-close" aria-label="Close login">&times;</button>
+  </div>
+  <form id="loginForm" class="login-form" autocomplete="on" novalidate>
+    <input type="text" id="firstName" placeholder="First name" required>
+    <input type="text" id="lastName" placeholder="Last name" required>
+    <input type="email" id="loginEmail" placeholder="Email" required>
+    <button type="submit" class="login-submit">Login</button>
+    <button type="button" id="logoutBtn" class="logout-btn">Logout</button>
+  </form>
+</aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
