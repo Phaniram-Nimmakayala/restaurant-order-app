@@ -5,14 +5,22 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors({
+// CORS config
+const corsOptions = {
   origin: "https://phaniram-nimmakayala.github.io",
-  methods: ["GET", "POST", "DELETE"],
+  methods: ["GET", "POST", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type"],
-}));
+};
+
+// Apply CORS middleware
+app.use(cors(corsOptions));
+
+// Handle preflight properly (important)
+app.options("/*", cors(corsOptions));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 
 
 
