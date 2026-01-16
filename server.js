@@ -6,15 +6,11 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// ✅ Proper CORS configuration for GitHub Pages
 app.use(cors({
   origin: "*",
-  methods: ["GET", "POST", "DELETE", "OPTIONS"],
+  methods: ["GET", "POST", "DELETE"],
   allowedHeaders: ["Content-Type"]
 }));
-
-// Handle preflight requests
-app.options("*", cors());
 
 app.use(express.json());
 app.use(express.static(__dirname));
