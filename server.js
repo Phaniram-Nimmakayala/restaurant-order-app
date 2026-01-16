@@ -1,12 +1,15 @@
+console.log("🔥 NEW SERVER CODE LOADED");
+
 const express = require("express");
 const sqlite3 = require("sqlite3");
-
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Manual CORS + Preflight handler (stable on Render)
+// Manual CORS + Preflight handler
 app.use((req, res, next) => {
+  console.log("CORS middleware active:", req.method, req.url);
+
   res.header("Access-Control-Allow-Origin", "https://phaniram-nimmakayala.github.io");
   res.header("Access-Control-Allow-Methods", "GET,POST,DELETE,OPTIONS");
   res.header("Access-Control-Allow-Headers", "Content-Type");
