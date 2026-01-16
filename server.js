@@ -6,14 +6,18 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// 🔥 Correct CORS setup
 app.use(cors({
   origin: "*",
-  methods: ["GET", "POST", "DELETE"],
-  allowedHeaders: ["Content-Type"]
+  methods: ["GET", "POST", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type"],
 }));
+
+app.options("*", cors()); // handle preflight
 
 app.use(express.json());
 app.use(express.static(__dirname));
+
 
 
 const db = new sqlite3.Database("./orders.db", err => {
