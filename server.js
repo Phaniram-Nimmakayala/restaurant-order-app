@@ -1,4 +1,3 @@
-const path = require("path");
 const express = require("express");
 const sqlite3 = require("sqlite3");
 const cors = require("cors");
@@ -14,6 +13,7 @@ app.use(cors({
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 
 
 /* ⚠️ SQLite must be writable in Render */
