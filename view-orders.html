@@ -202,9 +202,9 @@ button:active{
   });
 }
 
-
+const API = "https://restaurant-order-app-lijr.onrender.com";
 function loadOrders() {
- fetch("/orders")
+ fetch(`${API}/orders`)
     .then(res => res.json())
     .then(data => {
       const table = document.getElementById("ordersTable");
@@ -242,7 +242,7 @@ function loadOrders() {
 function deleteOrder(id) {
   if (!confirm("Are you sure you want to delete this order?")) return;
 
- fetch(`/delete-order/${id}`, {
+ fetch(`${API}/delete-order/${id}`, {
     method: "DELETE"
   })
   .then(res => res.json())

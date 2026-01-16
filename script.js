@@ -412,11 +412,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log("Order Data:", orderData);
 
-    const res = await fetch("/place-order", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(orderData)
-    });
+    const API = "https://restaurant-order-app-lijr.onrender.com";
+
+const res = await fetch(`${API}/place-order`, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(orderData)
+});
+
 
     console.log("Fetch response:", res);
 

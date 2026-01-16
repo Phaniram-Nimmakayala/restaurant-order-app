@@ -1,32 +1,27 @@
 const path = require("path");
 const express = require("express");
-const sqlite3 = require("sqlite3").verbose();
+const sqlite3 = require("sqlite3");
 const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-/* ✅ Correct and safe CORS */
 app.use(cors({
-  origin: "https://phaniram-nimmakayala.github.io",  // your frontend
+  origin: "https://phaniram-nimmakayala.github.io",
   methods: ["GET", "POST", "DELETE"],
   allowedHeaders: ["Content-Type"],
 }));
 
-app.options("*", cors());  // preflight handler
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-/* ⚠️ SQLite must be writable in Render */
-const dbPath = path.join(__dirname, "orders.db");
 
-const db = new sqlite3.Database(dbPath, (err) => {
-  if (err) {
-    console.error("DB error:", err);
-  } else {
-    console.log("SQLite database connected");
-  }
+/* ⚠️ SQLite must be writable in Render */
+const dbPath = "/tmp/orders.db";
+
+const db = new sqlite3.Database(dbPath, err => {
+  if (err) console.error("DB error:", err);
+  else console.log("SQLite DB ready at", dbPath);
 });
 
 db.run(`
