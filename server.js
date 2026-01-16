@@ -9,9 +9,14 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors({
   origin: "*",
-  methods: ["GET", "POST", "DELETE"],
-  allowedHeaders: ["Content-Type"]
+  methods: ["GET", "POST", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  optionsSuccessStatus: 200
 }));
+
+// Handle preflight explicitly
+app.options("*", cors());
+
 
 app.use(express.json());
 app.use(express.static(__dirname));
