@@ -6,23 +6,27 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// 🔥 Correct CORS setup
+/* ✅ Correct and safe CORS */
 app.use(cors({
-  origin: "*",
-  methods: ["GET", "POST", "DELETE", "OPTIONS"],
+  origin: "https://phaniram-nimmakayala.github.io",  // your frontend
+  methods: ["GET", "POST", "DELETE"],
   allowedHeaders: ["Content-Type"],
 }));
 
-app.options("*", cors()); // handle preflight
+app.options("*", cors());  // preflight handler
 
 app.use(express.json());
-app.use(express.static(__dirname));
+app.use(express.urlencoded({ extended: true }));
 
+/* ⚠️ SQLite must be writable in Render */
+const dbPath = path.join(__dirname, "orders.db");
 
-
-const db = new sqlite3.Database("./orders.db", err => {
-  if (err) console.error(err);
-  console.log("SQLite database connected");
+const db = new sqlite3.Database(dbPath, (err) => {
+  if (err) {
+    console.error("DB error:", err);
+  } else {
+    console.log("SQLite database connected");
+  }
 });
 
 db.run(`
@@ -34,12 +38,11 @@ CREATE TABLE IF NOT EXISTS orders (
   items TEXT,
   total REAL,
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-)
-`);
+)`);
+
+/* API Routes */
 
 app.post("/place-order", (req, res) => {
-  console.log("Order received:", req.body);
-
   const { name, mobile, address, items, total } = req.body;
 
   const sql = `
@@ -47,13 +50,12 @@ app.post("/place-order", (req, res) => {
     VALUES (?, ?, ?, ?, ?)
   `;
 
-  db.run(sql, [name, mobile, address, JSON.stringify(items), total], err => {
+  db.run(sql, [name, mobile, address, JSON.stringify(items), total], function (err) {
     if (err) {
-      console.error(err);
-      res.status(500).json({ message: "Database error" });
-      return;
+      console.error("Insert error:", err);
+      return res.status(500).json({ message: "Database error" });
     }
-    res.json({ message: "Order saved successfully" });
+    res.json({ message: "Order saved successfully", id: this.lastID });
   });
 });
 
@@ -64,38 +66,21 @@ app.get("/orders", (req, res) => {
   });
 });
 
-// 🔥 New delete route
 app.delete("/delete-order/:id", (req, res) => {
   const id = req.params.id;
-  console.log("Delete request received for ID:", id);
 
-  const sql = `DELETE FROM orders WHERE id = ?`;
-
-  db.run(sql, [id], function (err) {
-    if (err) {
-      console.error("Delete error:", err);
-      return res.status(500).json({ message: "Failed to delete order" });
-    }
-
-    if (this.changes === 0) {
-      // No row found with this ID
-      return res.status(404).json({ message: "Order not found" });
-    }
-
-    res.json({ message: "Order deleted successfully" });
+  db.run(`DELETE FROM orders WHERE id = ?`, [id], function (err) {
+    if (err) return res.status(500).json({ message: "Delete failed" });
+    if (this.changes === 0) return res.status(404).json({ message: "Order not found" });
+    res.json({ message: "Order deleted" });
   });
 });
 
+/* Health check */
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.send("Restaurant Order API Running");
 });
-
-app.get("/admin", (req, res) => {
-  res.sendFile(path.join(__dirname, "view-orders.html"));
-});
-
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-
